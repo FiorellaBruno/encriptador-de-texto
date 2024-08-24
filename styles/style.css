@@ -46,15 +46,17 @@ textarea{
 }
 
 .texto__desencriptado{
-    background: white;
+    background-color: white;
     background-image: url("/styles/Muñeco.png");
+    background-position: 40%;
     background-repeat: no-repeat;
     border: none;
-    border-radius:1.5rem;
+    border-radius:1rem;
     color:#0A3871;
-    margin-left: 6.1rem;
-    margin-top:1.25rem;
-    padding-left: 1.25trm;
+    margin-left: 8rem;
+    margin-top:0rem;
+    padding-bottom: 13rem;
+    padding-left: 1rem;
     position: fixed;
 }
 .texto__desencriptado:focus {
@@ -67,13 +69,47 @@ textarea{
 
 }
 
-.btn_encriptar{
+.btn__encriptador{
     background-color: #0A3871;
     border:0.063rem solid #0A3871;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     color:white;
     cursor: pointer;
-    height: 4.18rem;
-    width: 20.5rem;
-   
+    height: 3rem;
+    width: 9rem;
+}
+
+.btn__desencriptador{
+    background: #D8DFE8;
+    border:0.063rem solid --color--secundario;
+    border-radius: 1rem;
+    color: var(--color--secundario);
+    cursor: pointer;
+    height: 3rem;
+    margin-left: 2rem;
+    width: 9rem;
+}
+
+.btn__copiado{
+    border:0.063rem solid #0A3871;
+    border-radius: 1rem;
+    color:var(--color--secundario);
+    cursor: pointer;
+    height: 3rem;
+    width: 9rem;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: 160px;
+}
+
+.condiciones__desencriptador{
+    color:var(--color--cuaternario);
+    font-size: 0.7rem;
+}
+
+.pie__autor{
+    text-align: center;
+    font-size: 0.4rem;
+    color:var(--color--cuaternario);
+    font: 'Inter';
 }
