@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <link rel="icon" href="/styles/icons8-huella-dactilar-64.png">
     <link rel="stylesheet" href="./styles/style.css"> 
 </head>
 <body>
@@ -12,27 +13,26 @@
         <img src="/styles/Logo.png" alt="logo de alura" class="logo">
     </header>
     <main>
-        <section class="bloque__izquierdo">
+        <section>
             <textarea class="texto__encriptado" placeholder="ingrese el texto aqui" cols="30" rows="10"></textarea>
             <div>
                 <h6 class="condiciones__desencriptador">Sólo letras minúsculas y sin acentos</h6> 
             </div>
             <div class="botones">
                 <button class="btn__encriptador" onclick="btnEncriptador()">Encriptar</button>
-                <button class="btn__desencriptador">Desencriptar</button>
+                <button class="btn__desencriptador" onclick="btnDesencriptador()">Desencriptar</button>
             </div>
         </section>
         <section>
-            <textarea class="texto__desencriptado" placeholder="ingrese el texto aqui" cols="30" rows="10"></textarea>
+            <textarea class="cifrado" id="derecha" placeholder="Ingrese el texto que desees encriptar o desencriptar" cols="20" rows="10"></textarea>
             <div>
-                <button class="btn__copiado">Copiar</button>
+                <button class="btn__copiado" onclick="copiarTexto()">Copiar</button>
             </div>
         </section>
     </main>
-    
+    <footer class="pie__autor">
+        <p>Desarrollado por Fiorella Bruno</p>
+    </footer>
+    <script src="/script.js"></script>
 </body>
-<footer class="pie__autor">
-    <p>Desarrollado por Fiorella Bruno</p>
-</footer>
-<script src="/script.js"></script>
 </html>
