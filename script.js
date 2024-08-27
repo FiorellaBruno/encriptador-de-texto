@@ -1,8 +1,18 @@
 const textArea = document.querySelector(".texto__encriptado");
 const cifrado = document.querySelector(".cifrado");
 
+function validarTexto(texto) {
+    const regex = /^[a-z0-9\s]*$/; 
+    return regex.test(texto);
+}
+
 
 function btnEncriptador(){
+    if (!validarTexto(textArea.value)) {
+        alert("Error: El texto contiene caracteres especiales, mayúsculas o acentos no permitidos.");
+        return;
+    }
+
     const textoEncriptado = encriptador(textArea.value)
     cifrado.value = textoEncriptado;
     textArea.value ="";
@@ -32,6 +42,12 @@ function encriptador(stringEncriptacion){
 }
 
 function btnDesencriptador(){
+    if (!validarTexto(textArea.value)) {
+        alert("Error: El texto contiene caracteres especiales, mayúsculas o acentos no permitidos.");
+        return;
+    }
+
+
     const textoDesencriptado = desencriptador(textArea.value)
     cifrado.value = textoDesencriptado;
     textArea.value ="";
@@ -57,8 +73,6 @@ function desencriptador(stringDesencriptacion){
 
 function copiarTexto() {
     const texto = document.querySelector(".cifrado").value;
-    
-    // Usa la API del portapapeles
     navigator.clipboard.writeText(texto).then(() => {
         console.log('Texto copiado al portapapeles');
     }).catch(err => {
